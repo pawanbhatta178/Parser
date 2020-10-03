@@ -234,7 +234,7 @@ public abstract class LexArithArray extends IO
         // argv[0]: input file containing source code using tokens defined above
         // argv[1]: output file displaying a list of the tokens
 
-        setIO( argv[0], argv[1] );
+        setIO( argv[0], argv[1],argv[2] );
         setLex();
 
         int i;

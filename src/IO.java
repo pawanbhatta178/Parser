@@ -6,7 +6,7 @@ public abstract class IO
 {
     public static BufferedReader inStream;
     public static PrintWriter outStream;
-
+    public static PrintWriter outStream2;
     public static int a; // the current input character on "inStream"
     public static char c; // used to convert the variable "a" to the char type whenever necessary
 
@@ -48,7 +48,11 @@ public abstract class IO
         outStream.println(s);
     }
 
-    public static void setIO(String inFile, String outFile)
+    public static void display2(String s){
+        outStream2.println(s);
+    }
+
+    public static void setIO(String inFile, String outFile, String outFile2)
 
     // Sets the input and output streams to "inFile" and "outFile", respectively.
     // Sets the current input character "a" to the first character on the input stream.
@@ -58,6 +62,7 @@ public abstract class IO
         {
             inStream = new BufferedReader( new FileReader(inFile) );
             outStream = new PrintWriter( new FileOutputStream(outFile) );
+            outStream2=new PrintWriter(new FileOutputStream(outFile2));
             a = inStream.read();
         }
         catch(FileNotFoundException e)
@@ -76,6 +81,7 @@ public abstract class IO
         {
             inStream.close();
             outStream.close();
+            outStream2.close();
         }
         catch(IOException e)
         {
