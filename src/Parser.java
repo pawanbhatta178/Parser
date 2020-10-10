@@ -190,35 +190,6 @@ public abstract class Parser extends LexArithArray
         }
     }
 
-    public static LinkedHashMap<String, Integer> sortHashMapByValues(
-            HashMap<String, Integer> passedMap) {
-        List<String> mapKeys = new ArrayList<>(passedMap.keySet());
-        List<Integer> mapValues = new ArrayList<>(passedMap.values());
-        Collections.sort(mapValues,Collections.reverseOrder());
-        Collections.sort(mapKeys);
-
-        LinkedHashMap<String, Integer> sortedMap =
-                new LinkedHashMap<>();
-
-        Iterator<Integer> valueIt = mapValues.iterator();
-        while (valueIt.hasNext()) {
-            Integer val = valueIt.next();
-            Iterator<String> keyIt = mapKeys.iterator();
-
-            while (keyIt.hasNext()) {
-                String key = keyIt.next();
-                Integer comp1 = passedMap.get(key);
-                Integer comp2 = val;
-
-                if (comp1.equals(comp2)) {
-                    keyIt.remove();
-                    sortedMap.put(key, val);
-                    break;
-                }
-            }
-        }
-        return sortedMap;
-    }
 
     public static void main(String argv[])
     {
@@ -235,7 +206,7 @@ public abstract class Parser extends LexArithArray
         else if ( ! errorFound )
             assignmentList.printParseTree(""); // print the parse tree in linearly indented form in argv[1] file
 
-        LinkedHashMap<String, Integer> sortedHashMap= sortHashMapByValues(Obj.objCount);
+        LinkedHashMap<String, Integer> sortedHashMap= CountObjects.sortHashMapByValues(CountObjects.objCount);
         for( String key : sortedHashMap.keySet() ){
             Integer value = sortedHashMap.get(key);
             IO.display2(value+" objects of class "+key);
