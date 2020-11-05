@@ -1,5 +1,4 @@
 
-import java.util.*; // import the HashMap class
 
 
 abstract class Obj

@@ -21,8 +21,7 @@ public class CountObjects {
         Collections.sort(mapValues,Collections.reverseOrder());
         Collections.sort(mapKeys);
 
-        LinkedHashMap<String, Integer> sortedMap =
-                new LinkedHashMap<>();
+        LinkedHashMap<String, Integer> sortedMap = new LinkedHashMap<>();
 
         Iterator<Integer> valueIt = mapValues.iterator();
         while (valueIt.hasNext()) {
