@@ -12,6 +12,7 @@ public class CountObjects {
         if(nameOfSuperClass!="java.lang.Object") {
             getSuperClass(c.getSuperclass());
         }
+        int b=22;
     }
 
     public static LinkedHashMap<String, Integer> sortHashMapByValues(
