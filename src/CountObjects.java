@@ -5,7 +5,6 @@ public class CountObjects {
     public static HashMap<String, Integer> objCount = new HashMap<>();
 
     public static void getSuperClass(Class c){
-        int a=1;
         String nameOfClass=c.getName();
         String nameOfSuperClass=c.getSuperclass().getName();
         objCount.computeIfPresent(nameOfClass, (k, v) -> v + 1);
