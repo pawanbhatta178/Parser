@@ -10,6 +10,8 @@ abstract class Obj
 
     {
         CountObjects.getSuperClass(getClass());
+
+
     }
 
 }

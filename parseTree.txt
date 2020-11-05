@@ -18,7 +18,16 @@
  1 <E>
   2 <term>
    3 <primary>
-    4 3
+    4 x2
+   3 *
+   3 <term>
+    4 <primary>
+     5 x1
+  2 +
+  2 <E>
+   3 <term>
+    4 <primary>
+     5 5.5
 0 <assignment>
  1 x4
  1 =
@@ -26,22 +35,22 @@
   2 <term>
    3 <primary>
     4 4
+   3 /
+   3 <term>
+    4 <primary>
+     5 x3
+  2 -
+  2 <E>
+   3 <term>
+    4 <primary>
+     5 0.74
+   3 +
+   3 <E>
+    4 <term>
+     5 <primary>
+      6 5
 0 <assignment>
  1 x5
- 1 =
- 1 <E>
-  2 <term>
-   3 <primary>
-    4 5
-0 <assignment>
- 1 x6
- 1 =
- 1 <E>
-  2 <term>
-   3 <primary>
-    4 6
-0 <assignment>
- 1 y
  1 =
  1 <E>
   2 <term>
@@ -49,41 +58,82 @@
     4 <E>
      5 <term>
       6 <primary>
-       7 <E>
-        8 <term>
-         9 <primary>
-          10 <E>
-           11 <term>
-            12 <primary>
-             13 <E>
-              14 <term>
-               15 <primary>
-                16 <E>
-                 17 <term>
-                  18 <primary>
-                   19 x1
-              14 +
-              14 <E>
-               15 <term>
-                16 <primary>
-                 17 x2
-           11 +
-           11 <E>
-            12 <term>
-             13 <primary>
-              14 x3
-        8 +
-        8 <E>
-         9 <term>
-          10 <primary>
-           11 x4
-     5 +
+       7 x1
+     5 -
      5 <E>
       6 <term>
        7 <primary>
-        8 x5
+        8 x2
+   3 *
+   3 <term>
+    4 <primary>
+     5 x3
+  2 -
+  2 <E>
+   3 <term>
+    4 <primary>
+     5 12.0
+0 <assignment>
+ 1 x6
+ 1 =
+ 1 <E>
+  2 <term>
+   3 <primary>
+    4 6
   2 +
   2 <E>
    3 <term>
     4 <primary>
-     5 x6
+     5 x3
+0 <assignment>
+ 1 y
+ 1 =
+ 1 <E>
+  2 <term>
+   3 <primary>
+    4 x1
+   3 *
+   3 <term>
+    4 <primary>
+     5 x2
+    4 *
+    4 <term>
+     5 <primary>
+      6 x3
+     5 *
+     5 <term>
+      6 <primary>
+       7 x4
+      6 *
+      6 <term>
+       7 <primary>
+        8 x5
+       7 *
+       7 <term>
+        8 <primary>
+         9 x6
+  2 +
+  2 <E>
+   3 <term>
+    4 <primary>
+     5 x1
+    4 /
+    4 <term>
+     5 <primary>
+      6 x2
+     5 /
+     5 <term>
+      6 <primary>
+       7 x3
+      6 /
+      6 <term>
+       7 <primary>
+        8 x4
+       7 /
+       7 <term>
+        8 <primary>
+         9 x5
+        8 /
+        8 <term>
+         9 <primary>
+          10 x6
