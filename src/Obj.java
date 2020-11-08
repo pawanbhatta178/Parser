@@ -1,6 +1,4 @@
-import java.lang.reflect.Field;
 import java.util.*;
-import java.util.stream.Collectors;
 
 abstract class Obj {
     boolean visited = false; // indicates if this object has been visited by traverse() function
@@ -28,59 +26,30 @@ abstract class Obj {
         this.neighbours = neighbours;
     }
 
-    public void traverse() throws IllegalAccessException {
-        System.out.println("Object-graph traversal has started...");
-        dfs(this);
-        System.out.println(counter +" objects have been visited so far.");
-    }
-
-    public void dfs(Obj node) {
-        System.out.println(node.getClass().getName() + " ");
-        node.setNeighbours(getRelevantFieldObjects(node));
-        List<Obj> neighbours = node.getNeighbours();
-        node.visited = true;
-        counter++;
-        for (Obj neighbour : neighbours) {
-            if (neighbour != null && !neighbour.visited) {
-                dfs(neighbour);
-            }
-        }
-    }
-
-    public List<Obj> getRelevantFieldObjects(Obj o) {
-        List<Obj> finalObjects = new ArrayList<>();
-        List<Field> fields = getAllFieldsAlsoSuperFields(o);
-        for (Field f : fields) {
-            try {
-                finalObjects.add((Obj) f.get(o));
-            } catch (Exception e) {
-              //do nothing
-            }
-        }
-        return finalObjects;
-    }
-
-    public List<Field> getAllFieldsAlsoSuperFields(Obj o) {
-        List<Field> collector = new ArrayList<>();
-        Class c = o.getClass();
-        while (c.getSuperclass().getName() != "java.lang.Object") {
-            Collections.addAll(collector, c.getDeclaredFields());
-            c = c.getSuperclass();
-        }
-        return collector;
-    }
-
-
-    public Field[] getFields(Obj o) {
-        return o.getClass().getDeclaredFields();
+    public void traverse()  {
+        counter=0;
+        IO.display2("Object-graph traversal has started...");
+        DFT.dfs(this);
+        IO.display2(counter +" objects have been visited so far.");
+        IO.display2("---------------------------------");
     }
 
 
 
-    public boolean isInstanceOfObj(Object o) {
-        return o instanceof Obj;
-    }
 }
+
+
+
+
+//    public Field[] getFields(Obj o) {
+//        return o.getClass().getDeclaredFields();
+//    }
+//
+//
+//
+//    public boolean isInstanceOfObj(Object o) {
+//        return o instanceof Obj;
+//    }
 
 
 //    public List<Obj> getRelevantFieldObjects(Object o){

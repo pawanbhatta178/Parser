@@ -1,0 +1,126 @@
+104 objects of class Obj
+30 objects of class Primary
+30 objects of class Term
+23 objects of class AssignmentList
+21 objects of class E
+21 objects of class SinglePrimary
+20 objects of class Id
+12 objects of class Assignment
+12 objects of class SingleTerm
+11 objects of class MultipleAssignment
+10 objects of class Int
+9 objects of class AddE
+9 objects of class MulTerm
+
+------------------------------------
+
+Object-graph traversal has started...
+Assignment 
+SingleTerm 
+SinglePrimary 
+Int 
+4 objects have been visited so far.
+---------------------------------
+Object-graph traversal has started...
+MultipleAssignment 
+MultipleAssignment 
+Assignment 
+SingleTerm 
+SinglePrimary 
+Int 
+MultipleAssignment 
+Assignment 
+SingleTerm 
+SinglePrimary 
+Int 
+MultipleAssignment 
+Assignment 
+SingleTerm 
+SinglePrimary 
+Int 
+MultipleAssignment 
+Assignment 
+SingleTerm 
+SinglePrimary 
+Int 
+MultipleAssignment 
+Assignment 
+SingleTerm 
+SinglePrimary 
+Int 
+MultipleAssignment 
+Assignment 
+SingleTerm 
+SinglePrimary 
+Int 
+MultipleAssignment 
+Assignment 
+SingleTerm 
+SinglePrimary 
+Int 
+MultipleAssignment 
+Assignment 
+SingleTerm 
+SinglePrimary 
+Int 
+MultipleAssignment 
+Assignment 
+SingleTerm 
+SinglePrimary 
+Int 
+MultipleAssignment 
+Assignment 
+AddE 
+AddE 
+AddE 
+AddE 
+AddE 
+AddE 
+AddE 
+AddE 
+AddE 
+SingleTerm 
+SinglePrimary 
+Id 
+SinglePrimary 
+Id 
+SinglePrimary 
+Id 
+SinglePrimary 
+Id 
+SinglePrimary 
+Id 
+SinglePrimary 
+Id 
+SinglePrimary 
+Id 
+SinglePrimary 
+Id 
+SinglePrimary 
+Id 
+SinglePrimary 
+Id 
+Assignment 
+SingleTerm 
+MulTerm 
+MulTerm 
+MulTerm 
+MulTerm 
+MulTerm 
+MulTerm 
+MulTerm 
+MulTerm 
+MulTerm 
+SinglePrimary 
+Id 
+Id 
+Id 
+Id 
+Id 
+Id 
+Id 
+Id 
+Id 
+Id 
+100 objects have been visited so far.
+---------------------------------

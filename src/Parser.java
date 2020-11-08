@@ -200,25 +200,35 @@ public abstract class Parser extends LexArithArray
         setLex();
         getToken();
 
+
+
         AssignmentList assignmentList = assignmentList(); // build a parse tree
-
-        try {
-            assignmentList.traverse();
-        } catch (IllegalAccessException e) {
-            e.printStackTrace();
-        }
-
 
         if ( ! t.isEmpty() )
             errorMsg(5);
         else if ( ! errorFound )
             assignmentList.printParseTree(""); // print the parse tree in linearly indented form in argv[1] file
 
+        //printing number of times each object was created
         LinkedHashMap<String, Integer> sortedHashMap= CountObjects.sortHashMapByValues(CountObjects.objCount);
         for( String key : sortedHashMap.keySet() ){
             Integer value = sortedHashMap.get(key);
             IO.display2(value+" objects of class "+key);
         }
+        IO.display2("\n------------------------------------\n");
+
+        //Test Case 1
+//         assignmentList.traverse();
+
+
+        //Test Case 2 begins
+        ((MultipleAssignment)assignmentList).assignment.traverse();
+       assignmentList.traverse();
+
+        //Test Case 3
+//        ((MultipleAssignment)assignmentList).assignmentList.traverse();
+//        assignmentList.traverse();
+
 
         closeIO();
     }
