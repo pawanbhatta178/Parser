@@ -193,14 +193,22 @@ public abstract class Parser extends LexArithArray
 
     public static void main(String argv[])
     {
+
         // argv[0]: input file containing an assignment list
         // argv[1]: output file displaying the parse tree
-
         setIO( argv[0], argv[1],argv[2] );
         setLex();
         getToken();
 
         AssignmentList assignmentList = assignmentList(); // build a parse tree
+
+        try {
+            assignmentList.traverse();
+        } catch (IllegalAccessException e) {
+            e.printStackTrace();
+        }
+
+
         if ( ! t.isEmpty() )
             errorMsg(5);
         else if ( ! errorFound )
@@ -211,6 +219,7 @@ public abstract class Parser extends LexArithArray
             Integer value = sortedHashMap.get(key);
             IO.display2(value+" objects of class "+key);
         }
+
         closeIO();
     }
 }
